@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonu J S | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-dark: #1a1a1a;
+            --accent-blue: #007AFF;
+            --text-main: #333;
+            --text-muted: #666;
+            --bg-light: #f8f9fa;
+            --card-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-light); color: var(--text-main); line-height: 1.6; }
+
+        /* --- Header --- */
+        header { background-color: var(--primary-dark); color: white; padding: 80px 20px; text-align: center; }
+        .profile-img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid rgba(255,255,255,0.1); margin-bottom: 20px; transition: var(--transition); }
+        .profile-img:hover { transform: scale(1.05); border-color: var(--accent-blue); }
+        h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 15px; }
+        .tagline { max-width: 900px; margin: 0 auto; font-size: 1rem; font-weight: 300; color: #ccc; }
+
+        /* --- Global Layout --- */
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+        .section-title { text-align: center; margin-bottom: 40px; font-size: 2.2rem; font-weight: 700; color: var(--primary-dark); }
+
+        /* --- 1. Passion Cards --- */
+        .passion-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: -100px; }
+        .card { background: white; border-radius: 20px; overflow: hidden; box-shadow: var(--card-shadow); transition: var(--transition); display: flex; flex-direction: column; }
+        .card:hover { transform: translateY(-10px); }
+        .card-img { width: 100%; height: 220px; object-fit: cover; }
+        .card-content { padding: 30px; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-subtitle { font-size: 0.85rem; text-transform: uppercase; color: var(--accent-blue); font-weight: 700; margin-bottom: 10px; }
+        .card-p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px; flex-grow: 1; }
+        .btn { display: inline-block; padding: 12px 24px; background: var(--primary-dark); color: white; text-decoration: none; border-radius: 10px; text-align: center; font-weight: 600; transition: var(--transition); }
+        .btn:hover { background: var(--accent-blue); box-shadow: 0 5px 15px rgba(0,122,255,0.3); }
+
+        /* --- 2. Achievements (Award) --- */
+        .award-card { background: white; padding: 40px; border-radius: 20px; box-shadow: var(--card-shadow); display: flex; align-items: center; gap: 30px; border-left: 6px solid #FFD700; }
+        .award-img { width: 120px; height: 120px; object-fit: cover; border-radius: 10px; }
+        .award-icon { font-size: 3rem; }
+
+        /* --- 3. Professional Journey --- */
+        .exp-section { background: white; padding: 80px 0; }
+        .exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .exp-item { padding: 20px; border-bottom: 1px solid #eee; display: flex; gap: 20px; align-items: flex-start; }
+        .exp-thumb { width: 80px; height: 80px; border-radius: 8px; object-fit: cover; }
+        .exp-role { font-weight: 700; color: var(--primary-dark); display: block; margin-bottom: 5px; }
+
+        /* --- 4. Gallery --- */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
+        .gallery-item { height: 200px; border-radius: 12px; overflow: hidden; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; cursor: pointer; }
+        .gallery-item img:hover { transform: scale(1.1); }
+
+        /* --- Footer --- */
+        footer { background: white; text-align: center; padding: 60px 20px; border-top: 1px solid #eee; }
+        .social-links a { font-size: 1.8rem; color: var(--text-muted); margin: 0 15px; transition: var(--transition); }
+        .social-links a:hover { color: var(--accent-blue); }
+
+        @media (max-width: 768px) {
+            .exp-grid { grid-template-columns: 1fr; }
+            .award-card { flex-direction: column; text-align: center; }
+            .passion-grid { margin-top: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="Profile.jpg" alt="Sonu J S" class="profile-img">
+    <h1>Sonu J S</h1>
+    <p class="tagline">Public Speaker | Educational YouTuber | Founder | Electrical Engineer | Merchant Navy Cadet | Award Winner</p>
+</header>
+
+<div class="container">
+    <div class="passion-grid">
+        <article class="card">
+            <img src="YoutubePhoto.jpg" class="card-img" alt="YouTube">
+            <div class="card-content">
+                <span class="card-subtitle">Youtuber</span>
+                <h2 class="card-title">Capsule Session</h2>
+                <p class="card-p">1 Lakh+ Subscribers — Teaching Physics and Chemistry to SSLC and Plus One students with a focus on simplified learning.</p>
+                <a href="https://www.youtube.com/@capsulesession" class="btn">Visit Channel</a>
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="Trainer.jpg" class="card-img" alt="Training">
+            <div class="card-content">
+                <span class="card-subtitle">Founder</span>
+                <h2 class="card-title">Starting Trouble</h2>
+                <p class="card-p">350+ Sessions delivered. We create activity-based learning experiences for schools and colleges.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="Electrical.jpg" class="card-img" alt="Merchant Navy">
+            <div class="card-content">
+                <span class="card-subtitle">Merchant Navy</span>
+                <h2 class="card-title">Electro Technical Cadet</h2>
+                <p class="card-p">Specializing in shipboard electrical systems, troubleshooting, and marine engineering operations at sea.</p>
+            </div>
+        </article>
+    </div>
+</div>
+
+<section class="container">
+    <h2 class="section-title">Achievements</h2>
+    <div class="award-card">
+        <img src="Electrical.jpg" class="award-img" alt="Award Placeholder"> <div class="award-info">
+            <span class="card-subtitle" style="color:#b8860b">Top Recognition</span>
+            <h3>Kerala State Energy Conservation Award 2020</h3>
+            <p>Awarded by the Energy Management Centre for excellence in energy conservation practices and public awareness initiatives.</p>
+        </div>
+    </div>
+</section>
+
+<section class="exp-section">
+    <div class="container">
+        <h2 class="section-title">Other Professional Roles</h2>
+        <div class="exp-grid">
+            <div class="exp-item">
+                <img src="Trainer.jpg" class="exp-thumb" alt="Teaching">
+                <div>
+                    <span class="exp-role">Teaching Faculty (Schools)</span>
+                    <p>Academic mentor for Physics & Chemistry, focusing on secondary and higher secondary levels.</p>
+                </div>
+            </div>
+            <div class="exp-item">
+                <img src="Electrical.jpg" class="exp-thumb" alt="Energy">
+                <div>
+                    <span class="exp-role">Certified Home Energy Assessor</span>
+                    <p>Conducting detailed energy audits for residential buildings to optimize power usage.</p>
+                </div>
+            </div>
+            <div class="exp-item">
+                <img src="Profile.jpg" class="exp-thumb" alt="Resource Person">
+                <div>
+                    <span class="exp-role">EMC Resource Person</span>
+                    <p>Subject matter expert for state-level energy management workshops and training.</p>
+                </div>
+            </div>
+            <div class="exp-item">
+                <img src="YoutubePhoto.jpg" class="exp-thumb" alt="Public Speaker">
+                <div>
+                    <span class="exp-role">Public Speaker & Mentor</span>
+                    <p>Guided thousands of students through interpersonal skills and exam stress workshops.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <h2 class="section-title">Gallery</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item"><img src="Trainer.jpg" loading="lazy"></div>
+        <div class="gallery-item"><img src="YoutubePhoto.jpg" loading="lazy"></div>
+        <div class="gallery-item"><img src="Electrical.jpg" loading="lazy"></div>
+        <div class="gallery-item"><img src="Profile.jpg" loading="lazy"></div>
+        <div class="gallery-item"><img src="Trainer.jpg" loading="lazy"></div>
+        <div class="gallery-item"><img src="YoutubePhoto.jpg" loading="lazy"></div>
+        <div class="gallery-item"><img src="Electrical.jpg" loading="lazy"></div>
+        <div class="gallery-item"><img src="Profile.jpg" loading="lazy"></div>
+        <div class="gallery-item"><img src="Trainer.jpg" loading="lazy"></div>
+        <div class="gallery-item"><img src="Electrical.jpg" loading="lazy"></div>
+    </div>
+</section>
+
+<footer>
+    <div class="social-links">
+        <a href="https://www.youtube.com/@capsulesession" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p style="margin-top:20px;">&copy; 2026 Sonu J S | Electrical Engineer & Founder</p>
+</footer>
+
+</body>
+</html>
